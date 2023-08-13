@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'dashboard']);
+Route::get('/dashboard',[HomeController::class,'dashboard']);
+Route::get('/employeeList',[HomeController::class,'employeeList']);
+Route::get('/employee-attendace/{slug}', [HomeController::class, 'employeeAttendance'])->name('employee.attendace.show');
