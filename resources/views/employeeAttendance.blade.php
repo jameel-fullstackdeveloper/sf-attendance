@@ -6,6 +6,9 @@
         text-align: center;
         font-size:20px;
     }
+    .rounded-select {
+            border-radius: 500px; /* Adjust this value for more or less rounding */
+        }
 </style>
 <div class="page-content">
                     <div class="container-fluid">
@@ -23,15 +26,34 @@
                                 <div class="card">
                                     <div class="card-body">
 
+                                    <div class="col-md-2 float-right mb-3">
+                                        <select id="monthYearFilter" class="form-control rounded-select">
+                                            <?php
+                                                $currentYear = date('Y');
+                                                for ($month = 1; $month <= 12; $month++) {
+                                                    $monthName = date('M', mktime(0, 0, 0, $month, 1));
+                                                    $yearMonth = $monthName . ' ' . $currentYear;
+                                                    
+                                                    // Check if the current iteration month matches the current month
+                                                    $selected = ($month === (int) date('n')) ? 'selected' : '';
+
+                                                    echo '<option value="' . $monthName . '" ' . $selected . '>' . $yearMonth . '</option>';
+                                                }
+                                            ?>
+
+                                        </select>
+                                    </div>
+
+
                                         <table id="" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Check In</th>
-                                                <th>Check Out</th>
-                                                <th>Duration</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                                            <thead>
+                                                <tr>
+                                                    <th>Check In</th>
+                                                    <th>Check Out</th>
+                                                    <th>Duration</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
                                                 @php
                                                     $uniqueDates = [];
                                                     foreach ($data as $record) {
@@ -64,8 +86,9 @@
                                                         $nextCheckIn = $record['checkIn']['nextTime'] ?? null;
                                                         $checkOutTime = $record['checkOut']['time'] ?? null;
                                                         $nextCheckOut = $record['checkOut']['nextTime'] ?? null;
+                                                        $formattedDate = date('M Y', strtotime($checkInTime));
                                                     @endphp
-                                                    <tr>
+                                                    <tr data-date="{{ $formattedDate }}">
                                                         <td>{!! ($checkInTime ? date('d-M-Y', strtotime($checkInTime)) . '<br>' . $nextCheckIn : '---') !!}</td>
                                                         <td>{!! ($checkOutTime ? date('d-M-Y', strtotime($checkOutTime)) . '<br>' . $nextCheckOut : '<span class="btn btn-danger">Missing</span>') !!}</td>
                                                         <td>
@@ -83,7 +106,6 @@
                                                     </tr>
                                                 @endforeach
                                             </tbody>
-
                                         </table>
                                     </div>
                                 </div>
@@ -92,3 +114,30 @@
                     </div> 
                 </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('#monthYearFilter').on('change', function() {
+            var selectedMonthYear = $(this).val();
+            
+            if (selectedMonthYear === '') {
+                $('tbody tr').show(); // Show all rows if no filter selected
+            } else {
+                $('tbody tr').hide(); // Hide all rows
+
+                // Construct the search string in the format 'Month Year'
+                var searchString = selectedMonthYear + ' ' + (new Date()).getFullYear();
+
+                // Show only rows with matching month and year
+                $('tbody tr[data-date="' + searchString + '"]').show();
+            }
+        });
+
+        // Trigger the change event on page load to apply initial filtering
+        $('#monthYearFilter').trigger('change');
+    });
+</script>
+@endpush
+
+
