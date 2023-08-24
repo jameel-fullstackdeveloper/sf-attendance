@@ -34,7 +34,9 @@
                                                 @foreach($data as $val)
                                                 <tr>
                                                     <td><center>{{$val->emp_pin}}</center></td>
-                                                    <td>No image</td>
+                                                    <td>
+                                                    <img class="card-img" height="100px" width="50px"  src="data:image/png;base64,{{ base64_encode($val->emp_photo) }}"  alt="No image">
+                                                    </td>
                                                     <td>{{$val->emp_firstname}} {{$val->emp_lastname}}</td>
                                                     <td>{{$val->position->posi_name}}</td>
                                                     <td> <i class="bx bx-map"></i> {{$val->emp_address}}</td>

@@ -15,4 +15,9 @@ class HrEmployee extends Model
         return $this->belongsTo(HrPosition::class, 'position_id');
     }
 
+    public function department()
+    {
+        return $this->belongsTo(HrDepartment::class, 'department_id');
+    }
+
 }

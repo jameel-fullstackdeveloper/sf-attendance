@@ -1,8 +1,16 @@
 @extends('app')
 @section('content')
+<style>
+    .custom-span {
+        background-color: #9d9d9d;
+        padding: 10px 10px;
+        color: #00ff00;
+        font-size:20px;
+        text-align: center; 
+    }
+</style>
 <div class="page-content">
                     <div class="container-fluid">
-
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -19,227 +27,56 @@
                             </div>
                         </div>
                         <!-- end page title -->
-
                         <div class="row">
-                            <div class="col-xl-12">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="card card border border-primary">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Total Employees</p>
-                                                        <h4 class="mb-0 text-center">{{$employees}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                            @foreach($data as $val)
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-md-4">
+                                            <img class="card-img" height="200"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="Card image">
                                         </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-danger">
+                                        <div class="col-md-8">
                                             <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">Staff</p>
-                                                        <h4 class="mb-0 text-center">{{$staff}}</h4>
+                                                <h3>{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h3>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <span style="font-size:15px">Emp ID</span>
+                                                            <br>
+                                                            <span style="font-size:15px">Hired Date</span>
+                                                            <br>
+                                                            <span style="font-size:15px">Department</span>
+                                                            <br>
+                                                            <span style="font-size:15px">Card Number</span>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <span style="font-size:15px">{{$val->employee_id}}</span>
+                                                            <br>
+                                                            <span style="font-size:15px">{{ date('d-M-Y', strtotime($val->employee->emp_hiredate)) }}</span>
+                                                            <br>
+                                                            <span style="font-size:15px">{{$val->employee->department->dept_name}}</span>
+                                                            <br>
+                                                            <span style="font-size:15px">{{$val->employee->emp_cardNumber}}</span>
+                                                            <br>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-success">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Account Manager</p>
-                                                        <h4 class="mb-0 text-center">{{$account_manager}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-warning">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Supervisor</p>
-                                                        <h4 class="mb-0 text-center">{{$supervisor}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-info">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">Weighbridge Operator</p>
-                                                        <h4 class="mb-0 text-center">{{$WeighbridgeOperator}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-dark">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Medecine Incharge</p>
-                                                        <h4 class="mb-0 text-center">{{$MedecineIncharge}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span class="custom-span waves-effect waves-light">
+                                        <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) Check-In @else Check-Out @endif &nbsp {{ date('H:i:s', strtotime($val->punch_time)) }}
+
+                                    </span>
                                 </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="card card border border-primary">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Office Boy</p>
-                                                        <h4 class="mb-0 text-center">{{$OfficeBoy}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-danger">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">General Manager</p>
-                                                        <h4 class="mb-0 text-center">{{$GeneralManager}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-success">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Sr Accountant</p>
-                                                        <h4 class="mb-0 text-center">{{$SrAccountant}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-warning">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Jr Accountant</p>
-                                                        <h4 class="mb-0 text-center">{{$JrAccountant}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-info">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">Dispatch Manager</p>
-                                                        <h4 class="mb-0 text-center">{{$DispatchManager}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-dark">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Purchaser</p>
-                                                        <h4 class="mb-0 text-center">{{$Purchaser}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="card card border border-primary">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Recovery</p>
-                                                        <h4 class="mb-0 text-center">{{$Recovery}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-danger">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">Lab Incharge</p>
-                                                        <h4 class="mb-0 text-center">{{$LabIncharge}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-success">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Lab Assistant</p>
-                                                        <h4 class="mb-0 text-center">{{$LabAssistant}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-warning">
-                                            <div class="card-body ">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center">Dispatch Asistant</p>
-                                                        <h4 class="mb-0 text-center">{{$DispatchAsistant}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card border border-info">
-                                            <div class="card-body">
-                                                <div class="media">
-                                                    <div class="media-body">
-                                                        <p class="card-title text-center ">Watchman</p>
-                                                        <h4 class="mb-0 text-center">{{$Watchman}}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
                             </div>
+
+                            @endforeach
                         </div>
+
+                     
                     </div>
                 </div>
 @endsection
