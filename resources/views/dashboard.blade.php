@@ -69,7 +69,7 @@
                             @foreach($data as $val)
                             <div class="col-lg-3">
 
-                            <div class="card-body">
+                            <div class=" card card-body">
                             <div class="media">
                                 <div class="media-body">
                                     <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>
@@ -79,7 +79,17 @@
                                 </div>
 
                                 <div class="mini-stat-icon align-self-center">
-                                           <img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
+
+                                            <a href="{{url('employee-attendace').'/'.$val->employee_id}}">
+                                                @if($val->employee->emp_photo!=null)
+                                                <img class="rounded-circle header-profile-user" style="height:80px; width:80px;"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="No image">
+                                                @else
+                                                <img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
+                                                @endif
+                                            </a>
+
+
+                                           <!--<img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">-->
                                 </div>
                             </div>
                         </div>
