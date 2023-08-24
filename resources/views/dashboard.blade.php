@@ -36,8 +36,7 @@
                         <div class="row d-print-none">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-body" style="padding-bottom:0px;">
-
+            <div class="card-body">
                 <div class="col-md-12" style="text-align:center;">
                         <div class="row">
                             <div class="col-md-12">
@@ -55,8 +54,6 @@
                                     <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Cleaner  <i class="mdi mdi-arrow-right ms-1"></i></a>
                                     <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Godown  <i class="mdi mdi-arrow-right ms-1"></i></a>
                                     <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">General  <i class="mdi mdi-arrow-right ms-1"></i></a>
-
-
                                 </div>
                         </div>
               </div>
