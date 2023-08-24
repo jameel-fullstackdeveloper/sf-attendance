@@ -9,6 +9,49 @@
         text-align: center;
     }
 </style>
+
+
+<div class="row d-print-none">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body" style="padding-bottom:0px;">
+
+                <div class="col-md-12" style="text-align:center;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <a href="#feed_debtor" id="feed_debtor_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Feed <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_cash" id="feed_cash_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Cash  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_khalidshaikh" id="feed_khalidshaikh_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Khalid Shaikh <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_saqibmemon" id="feed_saqibmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Saqib Memon <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_faisalmemon" id="feed_faisalmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Dr. Faisal Memon <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_zaheer" id="feed_zaheer_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Zaheer Alam  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_israr" id="feed_israr_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Dr. Israr  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_qurban" id="feed_qurban_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Qurban <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Dr. Khalid  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px;margin-bottom:15px;">
+                            <div class="col-md-12">
+                                    <a href="#feed_aslam" id="feed_aslam_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Aslam Memon  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_mali" id="feed_mali_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Muhammad Ali  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_malighulam" id="feed_malighulam_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Ghulam Hussain  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_irfan" id="feed_irfan_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Irfan  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_mustafa" id="feed_mustafa_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Mustafa  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_athar" id="feed_athar_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Dr. Athar <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_karachi" id="feed_karachi_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Karachi  <i class="mdi mdi-arrow-right ms-1"></i></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="page-content">
                     <div class="container-fluid">
                         <!-- start page title -->
