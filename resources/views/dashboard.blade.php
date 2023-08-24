@@ -67,7 +67,23 @@
                         <div class="row">
 
                             @foreach($data as $val)
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
+
+                            <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>
+                                    <h5 class="mb-2 text-success">  67 </h5>
+                                    <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View All <i class="fa fa-arrow-circle-right"></i></a></p>
+
+                                </div>
+
+                                <div class="mini-stat-icon align-self-center">
+                                           <img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
+                                </div>
+                            </div>
+                        </div>
+
 
 
                                     <div class="card">
