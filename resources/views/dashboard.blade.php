@@ -69,7 +69,8 @@
                             @foreach($data as $val)
                             <div class="col-lg-3">
 
-                            <div class=" card card-body">
+                        <div class="card mini-stats-wid">
+                            <div class="card-body">
                                         <div class="media">
                                             <div class="media-body">
                                             <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
