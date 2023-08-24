@@ -35,7 +35,13 @@
                                                 <tr>
                                                     <td><center>{{$val->emp_pin}}</center></td>
                                                     <td>
-                                                    <center><img class="rounded-circle" height="100px" width="100px"  src="data:image/png;base64,{{ base64_encode($val->emp_photo) }}"  alt="No image"></center>
+                                                    <center>
+                                                    @if($val->emp_photo!=null)
+                                                        <img class="rounded-circle" height="100px" width="100px"  src="data:image/png;base64,{{ base64_encode($val->emp_photo) }}"  alt="No image">
+                                                    @else
+                                                        <img class="rounded-circle" height="100px" width="100px"  src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
+                                                    @endif
+                                                    </center>
                                                     </td>
                                                     <td>{{$val->emp_firstname}} {{$val->emp_lastname}}</td>
                                                     <td>{{$val->position->posi_name}}</td>
