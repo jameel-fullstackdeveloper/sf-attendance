@@ -75,9 +75,9 @@
                                             <div class="col-md-4">
                                             <a href="{{url('employee-attendace').'/'.$val->employee_id}}">
                                                 @if($val->employee->emp_photo!=null)
-                                                <img class="card-img" height="200"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="No image">
+                                                <img class="card-img"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="No image">
                                                 @else
-                                                <img class="card-img" height="200"  src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
+                                                <img class="card-img" src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
                                                 @endif
                                             </a>
                                             </div>
