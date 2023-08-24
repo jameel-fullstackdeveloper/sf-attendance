@@ -35,7 +35,7 @@
                                                 <tr>
                                                     <td><center>{{$val->emp_pin}}</center></td>
                                                     <td>
-                                                    <img class="card-img" height="100px" width="50px"  src="data:image/png;base64,{{ base64_encode($val->emp_photo) }}"  alt="No image">
+                                                    <center><img class="rounded-circle" height="100px" width="100px"  src="data:image/png;base64,{{ base64_encode($val->emp_photo) }}"  alt="No image"></center>
                                                     </td>
                                                     <td>{{$val->emp_firstname}} {{$val->emp_lastname}}</td>
                                                     <td>{{$val->position->posi_name}}</td>

@@ -76,6 +76,7 @@ class HomeController extends Controller
     public function employeeAttendance($slug)
     {
         $pageTitle = 'Employee Attendance';
+        $empName=HrEmployee::where('id',$slug)->first();
         $data = DB::table('att_punches')
            ->where('employee_id', $slug)
            ->orderByDesc('id')
@@ -84,6 +85,7 @@ class HomeController extends Controller
         return view('employeeAttendance')->with([
             'pageTitle'=>$pageTitle,
             'data'=>$data,
+            'empName'=>$empName,
         ]);
     }
 
