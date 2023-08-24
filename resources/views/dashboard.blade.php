@@ -40,20 +40,20 @@
                 <div class="col-md-12" style="text-align:center;">
                         <div class="row">
                             <div class="col-md-12">
-                                    <a href="#feed_debtor" id="feed_debtor_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Office <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_cash" id="feed_cash_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Labortary  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_khalidshaikh" id="feed_khalidshaikh_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Weighbridge <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_saqibmemon" id="feed_saqibmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Store<i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_faisalmemon" id="feed_faisalmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Boiler<i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_zaheer" id="feed_zaheer_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Electric <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_israr" id="feed_israr_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Machine  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_qurban" id="feed_qurban_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Office Boy <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Supervisor  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Medicine  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Maintenance  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Cleaner  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Godown  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">General  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_debtor" id="feed_debtor_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Office <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_cash" id="feed_cash_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Labortary  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_khalidshaikh" id="feed_khalidshaikh_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Weighbridge <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_saqibmemon" id="feed_saqibmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Store<i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_faisalmemon" id="feed_faisalmemon_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Boiler<i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_zaheer" id="feed_zaheer_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1 mt-1">Electric <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_israr" id="feed_israr_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1 mt-1">Machine  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_qurban" id="feed_qurban_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Office Boy <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Supervisor  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Medicine  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Maintenance  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Cleaner  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">Godown  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1 mt-1">General  <i class="mdi mdi-arrow-right ms-1"></i></a>
                                 </div>
                         </div>
               </div>
