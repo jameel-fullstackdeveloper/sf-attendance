@@ -50,7 +50,14 @@
                                     <a href="#feed_israr" id="feed_israr_link" class="btn btn-info waves-effect waves-light btn-sm  mr-1">Machine  <i class="mdi mdi-arrow-right ms-1"></i></a>
                                     <a href="#feed_qurban" id="feed_qurban_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Office Boy <i class="mdi mdi-arrow-right ms-1"></i></a>
                                     <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Supervisor  <i class="mdi mdi-arrow-right ms-1"></i></a>
-                            </div>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Medicine  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Maintenance  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Cleaner  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">Godown  <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                    <a href="#feed_masood" id="feed_masood_link" class="btn btn-info waves-effect waves-light btn-sm mr-1">General  <i class="mdi mdi-arrow-right ms-1"></i></a>
+
+
+                                </div>
                         </div>
               </div>
                 </div>
