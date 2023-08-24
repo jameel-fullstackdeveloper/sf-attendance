@@ -72,7 +72,7 @@
                             <div class=" card card-body">
                             <div class="media">
                                 <div class="media-body">
-                                 <h5 class="text-truncate" style="font-size:15px;color:#495057;text-transform: uppercase;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
+                                 <h5 class="text-truncate" style="font-size:15px;color:#495057;text-transform: uppercase;margin-bottom:1px;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
                                     <span class="text-warning">{{$val->employee->department->dept_name}}</span>
                                     <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View Log <i class="fa fa-arrow-circle-right"></i></a></p>
                                 </div>
