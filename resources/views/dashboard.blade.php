@@ -99,6 +99,8 @@
                                            <!--<img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">-->
                                 </div>
                             </div>
+                            <hr/>
+
                         </div>
 
 
