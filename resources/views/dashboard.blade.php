@@ -77,13 +77,10 @@
                                 <!--<h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>-->
 
 
-                                    <h5 class="mb-2 text-success"
-                                        @if($val->workstate==1) style="color:red" @endif
-                                        >
+                                    <span class="mb-2 text-success">
+                                         <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) Check-In @else Check-Out @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
 
-                                            <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) Check-In @else Check-Out @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
-
-                                    </h5>
+                                    </span>
                                     <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View Log <i class="fa fa-arrow-circle-right"></i></a></p>
 
                                 </div>
