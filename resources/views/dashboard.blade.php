@@ -5,8 +5,8 @@
         background-color: white;
         padding: 10px 10px;
         color: #00ff00;
-        font-size:20px;
-        text-align: center; 
+        font-size:16px;
+        text-align: center;
     }
 </style>
 <div class="page-content">
@@ -32,7 +32,7 @@
                             @foreach($data as $val)
                             <div class="col-lg-4">
 
-                               
+
                                     <div class="card">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-md-4">
@@ -87,7 +87,7 @@
                             @endforeach
                         </div>
 
-                     
+
                     </div>
                 </div>
 @endsection
