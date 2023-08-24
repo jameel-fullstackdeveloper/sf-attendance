@@ -73,16 +73,7 @@
                             <div class="media">
                                 <div class="media-body">
                                  <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
-
-                                <!--<h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>-->
-
-
-                                    <span class="mb-2 text-success" @if($val->workstate==1) style="color:red" @endif>
-                                         <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
-
-                                    </span>
                                     <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View Log <i class="fa fa-arrow-circle-right"></i></a></p>
-
                                 </div>
 
                                 <div class="mini-stat-icon align-self-center">
@@ -101,6 +92,10 @@
                             </div>
                             <hr/>
 
+                                <span class="mb-2 text-success" <?php if($val->workstate==1) { echo 'style="color:red"'; } ?> >
+                                         <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
+
+                                    </span>
                         </div>
 
 
