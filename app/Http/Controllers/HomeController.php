@@ -55,7 +55,7 @@ class HomeController extends Controller
     public function dashboard(Request $request)
     {
         $pageTitle = 'Home';
-        $data = AttendancePunches::with('employee')->orderBy('id','desc')->limit('9')->get();
+        $data = AttendancePunches::with('employee')->orderBy('id','desc')->limit('12')->get();
         return view('dashboard')->with([
             'pageTitle'=>$pageTitle,
             'data'=>$data
