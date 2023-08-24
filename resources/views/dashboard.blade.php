@@ -70,34 +70,37 @@
                             <div class="col-lg-3">
 
                             <div class=" card card-body">
-                            <div class="media">
-                                <div class="media-body">
-                                 <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
+                                        <div class="media">
+                                            <div class="media-body">
+                                            <h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">{{$val->employee->emp_firstname}} {{$val->employee->emp_lastname}}</h5>
 
-                                <!--<h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>-->
-
-
-                                    <span class="mb-2 text-success" @if($val->workstate==1) style="color:red" @endif>
-                                         <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
-
-                                    </span>
-                                    <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View Log <i class="fa fa-arrow-circle-right"></i></a></p>
-
-                                </div>
-
-                                <div class="mini-stat-icon align-self-center">
-
-                                            <a href="{{url('employee-attendace').'/'.$val->employee_id}}">
-                                                @if($val->employee->emp_photo!=null)
-                                                <img class="rounded-circle header-profile-user" style="height:80px; width:80px;"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="No image">
-                                                @else
-                                                <img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
-                                                @endif
-                                            </a>
+                                            <!--<h5 class="text-truncate mb-2" style="font-size:15px;color:#495057;text-transform: uppercase;">Employees</h5>-->
 
 
-                                           <!--<img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">-->
-                                </div>
+                                                <span class="mb-2 text-success" @if($val->workstate==1) style="color:red" @endif>
+                                                    <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
+
+                                                </span>
+                                                <p><a href="http://erp.sonafeeds.live/allemployees" style="color:#495057"> View Log <i class="fa fa-arrow-circle-right"></i></a></p>
+
+                                            </div>
+
+                                        <div class="mini-stat-icon align-self-center">
+
+                                                    <a href="{{url('employee-attendace').'/'.$val->employee_id}}">
+                                                        @if($val->employee->emp_photo!=null)
+                                                        <img class="rounded-circle header-profile-user" style="height:80px; width:80px;"  src="data:image/png;base64,{{ base64_encode($val->employee->emp_photo) }}"  alt="No image">
+                                                        @else
+                                                        <img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="{{asset('assets/images/users/avatar.png')}}"  alt="No image">
+                                                        @endif
+                                                    </a>
+
+
+                                                <!--<img class="rounded-circle header-profile-user" style="height:80px; width:80px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">-->
+                                        </div>
+                                        <div class="card-body border-top py-3">
+                                        <p class="mb-0"> <span class="badge badge-soft-success me-1"><i class="bx bx-trending-up align-bottom me-1"></i> 18.89%</span> Increase last month</p>
+                                    </div>
                             </div>
                         </div>
 
