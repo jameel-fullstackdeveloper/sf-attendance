@@ -68,7 +68,7 @@
                                             <tr>
                                                 <td style="text-align:left">Mobile: </td>
                                                 <td style="text-align:left">
-                                                <i class="bx bx-phone"></i> {{$empName->->emp_phone}}
+                                                <i class="bx bx-phone"></i> {{$empName->emp_phone}}
                                                 <br><i class="bx bx-phone"></i> 03000407266
                                                 </td>
                                             </tr>
