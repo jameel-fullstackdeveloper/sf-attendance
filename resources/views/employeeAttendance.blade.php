@@ -36,7 +36,7 @@
 
                         <h4 class="card-title mb-4 text-uppercase text-success"> Employee Info</h4>
 
-                        @if($val->employee->emp_photo!=null)
+                        @if($empName->emp_photo!=null)
                             <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
                                  src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}" />
                         @else
