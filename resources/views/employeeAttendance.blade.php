@@ -8,6 +8,10 @@
     .rounded-select {
             border-radius: 500px;
         }
+
+    #infotable table tr, table th {
+        font-size:14px;
+    }
 </style>
         <div class="page-content">
             <div class="container-fluid">
@@ -36,7 +40,7 @@
 
                             <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">Shahzad Muhammad</h5>
 
-                                    <table class="table align-middle table-nowrap mb-0">
+                                    <table id="infotable" class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
 
                                         </thead>
