@@ -41,7 +41,7 @@
                                  src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}">
                         @else
                         <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
-                                 src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}">
+                                 src="{{asset('assets/images/users/avatar.png')}}">
                         @endif
 
 
