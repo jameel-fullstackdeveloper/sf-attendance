@@ -53,7 +53,7 @@
 
                                             <tr>
                                                 <td style="text-align:left">Position: </td>
-                                                <td style="text-align:left">General Manager</td>
+                                                <td style="text-align:left"> {{$empName->position->name }}</td>
                                             </tr>
 
                                             <tr>
@@ -63,7 +63,7 @@
 
                                             <tr>
                                                 <td style="text-align:left">Address: </td>
-                                                <td style="text-align:left"><i class="bx bx-map"></i> Unit #10, Near Afzal Shah Ground, Latifabad</td>
+                                                <td style="text-align:left"><i class="bx bx-map"></i> {{$empName->emp_address }}</td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align:left">Mobile: </td>
