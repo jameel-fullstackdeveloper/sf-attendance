@@ -21,10 +21,63 @@
                     <div class="col-6">
                         <span class="mb-0 font-size-18" style="color:red">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</span>
                     </div>
-                </div>     
+                </div>
 
                 <div class="row">
-                    <div class="col-12">
+
+                <div class="col-md-3">
+                    <div class="card mini-stats-wid">
+                        <div class="card-body" style="text-align:center;">
+
+                        <h4 class="card-title mb-4 text-uppercase text-success"> Employee Info</h4>
+
+                                                                        <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
+
+
+                                    <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">Shahzad Muhammad</h5>
+
+                                    <table class="table align-middle table-nowrap mb-0">
+                                        <thead class="table-light">
+
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:left">Department: </td>
+                                                <td style="text-align:left">Office</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:left">Position: </td>
+                                                <td style="text-align:left">General Manager</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:left">Hire Date: </td>
+                                                <td style="text-align:left">01-Jan-2000 </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:left">Address: </td>
+                                                <td style="text-align:left"><i class="bx bx-map"></i> Unit #10, Near Afzal Shah Ground, Latifabad</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">Mobile: </td>
+                                                <td style="text-align:left">
+                                                <i class="bx bx-phone"></i> 03332612898
+                                                                                                <br><i class="bx bx-phone"></i> 03000407266
+                                                                                            </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    <div class="col-9">
                         <div class="card">
                             <div class="card-body">
 
@@ -35,7 +88,7 @@
                                         for ($month = 1; $month <= 12; $month++) {
                                             $monthName = date('M', mktime(0, 0, 0, $month, 1));
                                             $yearMonth = $monthName . ' ' . $currentYear;
-                                            
+
                                             // Check if the current iteration month matches the current month
                                             $selected = ($month === (int) date('n')) ? 'selected' : '';
 
@@ -61,7 +114,7 @@
                                             foreach ($data as $record) {
                                                 if ($record->workstate == 0) {
                                                     $date = substr($record->punch_time, 0, 10); // Extract YYYY-MM-DD part
-                                                    
+
                                                     if (!isset($uniqueDates[$date]['checkIn']) || $record->punch_time < $uniqueDates[$date]['checkIn']['time']) {
                                                         $uniqueDates[$date]['checkIn'] = [
                                                             'time' => $record->punch_time,
@@ -71,7 +124,7 @@
                                                 } elseif ($record->workstate == 1 || is_null($uniqueDates[$date]['checkOut']) ||
                                                     $record->punch_time > $uniqueDates[$date]['checkOut']) {
                                                     $date = substr($record->punch_time, 0, 10); // Extract YYYY-MM-DD part
-                                                    
+
                                                     if (!isset($uniqueDates[$date]['checkOut'])) {
                                                         $uniqueDates[$date]['checkOut'] = [
                                                             'time' => $record->punch_time,
@@ -111,9 +164,9 @@
                                 </table>
                             </div>
                         </div>
-                    </div> 
-                </div> 
-            </div> 
+                    </div>
+                </div>
+            </div>
         </div>
 @endsection
 
@@ -122,7 +175,7 @@
     $(document).ready(function() {
         $('#monthYearFilter').on('change', function() {
             var selectedMonthYear = $(this).val();
-            
+
             if (selectedMonthYear === '') {
                 $('tbody tr').show(); // Show all rows if no filter selected
             } else {
