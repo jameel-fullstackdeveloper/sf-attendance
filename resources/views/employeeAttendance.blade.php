@@ -3,7 +3,7 @@
 <style>
     table tr, table th {
         text-align: center;
-        font-size:20px;
+        font-size:14px;
     }
     .rounded-select {
             border-radius: 500px;
