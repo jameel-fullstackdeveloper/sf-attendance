@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <span class="mb-0 font-size-18" style="color:red">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</span>
+                        <span class="mb-0 font-size-18" style="color:red"></span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                             <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
                                  src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
 
-                            <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">Shahzad Muhammad</h5>
+                            <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</h5>
 
                                     <table id="infotable" class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
