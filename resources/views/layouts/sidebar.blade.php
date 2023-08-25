@@ -24,7 +24,7 @@
 
                 <li>
                     <a href="{{url('/shifts')}}" class=" waves-effect">
-                        <i class="bx bx-user"></i>
+                        <i class="bx bx-clock"></i>
                         <span>Shifts</span>
                     </a>
                 </li>
