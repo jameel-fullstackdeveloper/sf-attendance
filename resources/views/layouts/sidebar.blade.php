@@ -22,6 +22,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{url('/shifts')}}" class=" waves-effect">
+                        <i class="bx bx-user"></i>
+                        <span>Shifts</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>
