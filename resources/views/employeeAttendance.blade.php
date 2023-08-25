@@ -9,7 +9,7 @@
             border-radius: 500px;
         }
 
-    #infotable table tr, table th {
+    #infotable td {
         font-size:14px;
     }
 </style>
