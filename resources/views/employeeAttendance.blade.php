@@ -53,7 +53,7 @@
 
                                             <tr>
                                                 <td style="text-align:left">Position: </td>
-                                                <td style="text-align:left"> {{$empName->position->name }}</td>
+                                                <td style="text-align:left"> {{$empName->position->posi_name }}</td>
                                             </tr>
 
                                             <tr>
