@@ -36,8 +36,14 @@
 
                         <h4 class="card-title mb-4 text-uppercase text-success"> Employee Info</h4>
 
+                        @if($val->employee->emp_photo!=null)
                             <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
                                  src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}">
+                        @else
+                        <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
+                                 src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}">
+                        @endif
+
 
                             <h5 class="text-truncate mb-2" style="font-size:18px;color:#495057;text-transform: uppercase;">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</h5>
 
