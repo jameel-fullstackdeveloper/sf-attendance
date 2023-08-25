@@ -39,7 +39,7 @@
                             <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
                                  src="data:image/png;base64,{{ base64_encode($empName->emp_photo) }}">
 
-                            <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</h5>
+                            <h5 class="text-truncate mb-2" style="font-size:18px;color:#495057;text-transform: uppercase;">{{$empName->emp_firstname}}  {{$empName->emp_lastname}}</h5>
 
                                     <table id="infotable" class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
@@ -69,7 +69,7 @@
                                                 <td style="text-align:left">Mobile: </td>
                                                 <td style="text-align:left">
                                                 <i class="bx bx-phone"></i> {{$empName->emp_phone}}
-                                                <br><i class="bx bx-phone"></i> 03000407266
+                                                <br><i class="bx bx-phone"></i> {{$empName->emp_emergencyphone1}}
                                                 </td>
                                             </tr>
 
