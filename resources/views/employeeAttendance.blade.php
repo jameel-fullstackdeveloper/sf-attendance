@@ -31,10 +31,10 @@
 
                         <h4 class="card-title mb-4 text-uppercase text-success"> Employee Info</h4>
 
-                                                                        <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;" src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
+                            <img class=" mb-3 rounded-circle header-profile-user" style="height:200px; width:200px;"
+                                 src="http://erp.sonafeeds.live/assets/images/nouser.jpg">
 
-
-                                    <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">Shahzad Muhammad</h5>
+                            <h5 class="text-truncate mb-2" style="font-size:16px;color:#495057;text-transform: uppercase;">Shahzad Muhammad</h5>
 
                                     <table class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
@@ -100,7 +100,7 @@
                             </div>
 
 
-                                <table id="" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <table id="logtable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                         <tr>
                                             <th>Check In</th>
@@ -177,13 +177,13 @@
             var selectedMonthYear = $(this).val();
 
             if (selectedMonthYear === '') {
-                $('tbody tr').show(); // Show all rows if no filter selected
+                $('#logtable tbody tr').show(); // Show all rows if no filter selected
             } else {
-                $('tbody tr').hide(); // Hide all rows
+                $('#logtable tbody tr').hide(); // Hide all rows
 
                 var searchString = selectedMonthYear + ' ' + (new Date()).getFullYear();
 
-                $('tbody tr[data-date="' + searchString + '"]').show();
+                $('#logtable tbody tr[data-date="' + searchString + '"]').show();
             }
         });
 
