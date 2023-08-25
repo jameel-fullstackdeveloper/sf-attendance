@@ -48,7 +48,7 @@
                                         <tbody>
                                             <tr>
                                                 <td style="text-align:left">Department: </td>
-                                                <td style="text-align:left">Office</td>
+                                                <td style="text-align:left">{{$empName->department->dept_name}}</td>
                                             </tr>
 
                                             <tr>
@@ -58,7 +58,7 @@
 
                                             <tr>
                                                 <td style="text-align:left">Hire Date: </td>
-                                                <td style="text-align:left">01-Jan-2000 </td>
+                                                <td style="text-align:left">{{ date('d-M-Y', strtotime($empName->emp_hiredate)) }} </td>
                                             </tr>
 
                                             <tr>
@@ -68,9 +68,9 @@
                                             <tr>
                                                 <td style="text-align:left">Mobile: </td>
                                                 <td style="text-align:left">
-                                                <i class="bx bx-phone"></i> 03332612898
-                                                                                                <br><i class="bx bx-phone"></i> 03000407266
-                                                                                            </td>
+                                                <i class="bx bx-phone"></i> {{$empName->->emp_phone}}
+                                                <br><i class="bx bx-phone"></i> 03000407266
+                                                </td>
                                             </tr>
 
                                         </tbody>
