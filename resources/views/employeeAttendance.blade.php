@@ -75,8 +75,8 @@
                                                 <td style="text-align:left">Mobile: </td>
                                                 <td style="text-align:left">
                                                 <i class="bx bx-phone"></i> {{$empName->emp_phone}}
-                                                @if({{$empName->emp_emergencyphone1}} != null)
-                                                <br><i class="bx bx-phone"></i> {{$empName->emp_emergencyphone1}}
+                                                @if($empName->emp_emergencyphone1 != null)
+                                                    <br><i class="bx bx-phone"></i> {{$empName->emp_emergencyphone1}}
                                                 @endif
                                                 </td>
                                             </tr>
