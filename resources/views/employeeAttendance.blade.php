@@ -11,6 +11,7 @@
 
     #infotable td {
         font-size:14px;
+        white-space: normal;
     }
 </style>
         <div class="page-content">
