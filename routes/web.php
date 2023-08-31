@@ -17,3 +17,5 @@ Route::get('/',[HomeController::class,'dashboard']);
 Route::get('/dashboard',[HomeController::class,'dashboard']);
 Route::get('/employeeList',[HomeController::class,'employeeList']);
 Route::get('/employee-attendace/{slug}', [HomeController::class, 'employeeAttendance'])->name('employee.attendace.show');
+Route::get('/employees/{slug}', [HomeController::class, 'employees'])->name('employees.show');
+// Route::get('/employees/{slug}', [HomeController::class, 'employees'])->name('employees.show');
