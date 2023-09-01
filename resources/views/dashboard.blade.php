@@ -8,6 +8,13 @@
         font-size:16px;
         text-align: center;
     }
+    #spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
 </style>
 
 <div class="page-content">
@@ -45,6 +52,12 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div id="spinner" class="d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
                         </div>
 
@@ -92,13 +105,13 @@
     
     var url = "{{ route('employees.show', ':slug') }}";
     url = url.replace(':slug', slug);
+    $('#spinner').removeClass('d-none');
 
     $.get(url, postData, function (response) {
             var data = response.data; // Extract the nested data object
             $('#empCard').empty();
 
             $.each(data, function(index, val) {
-
                 var url ='employee-attendace/'+val.id;
                 var workstateColor = val.workstate === 1 ? 'color: red;' : 'color: green;';
                 var workstateText = val.workstate === 0 ? 'CheckIn' : 'CheckOut';
@@ -128,6 +141,9 @@
 
                 $('#empCard').append(newCard);
             });
+
+            $('#spinner').addClass('d-none');
+
 
     });
 }
