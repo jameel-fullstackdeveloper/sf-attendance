@@ -81,8 +81,8 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <hr/>
-                                        <span class="font-size-14" <?php if($val->workstate==1) { echo 'style="color:red"'; } else { echo  'style="color:green"';} ?> >
+                                        <hr/>
+                                        <span class="font-size-14" <?php if($val->workstate==0) { echo 'style="color:green"'; } else { echo  'style="color:red"';} ?> >
                                                 <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
                                         </span>
                                 </div>
@@ -102,7 +102,7 @@
     var postData = {
         slug: slug
     };
-    
+
     var url = "{{ route('employees.show', ':slug') }}";
     url = url.replace(':slug', slug);
     $('#spinner').removeClass('d-none');
@@ -113,8 +113,8 @@
 
             $.each(data, function(index, val) {
                 var url ='employee-attendace/'+val.id;
-                var workstateColor = val.workstate === 1 ? 'color: red;' : 'color: green;';
-                var workstateText = val.workstate === 0 ? 'CheckIn' : 'CheckOut';
+                var workstateColor = val.workstate === 0 ? 'color: red;' : 'color: green;';
+                var workstateText = val.workstate === 1 ? 'CheckOut' : 'CheckIn';
                 var punchTime = new Date(val.punch_time);
 
                 var newCard = $('<div class="col-lg-3">' +
