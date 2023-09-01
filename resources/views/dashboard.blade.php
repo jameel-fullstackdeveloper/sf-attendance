@@ -100,8 +100,8 @@
             $.each(data, function(index, val) {
 
                 var url ='employee-attendace/'+val.id;
-                var workstateColor = val.workstate === 1 ? 'color: red;' : 'color: green;';
-                var workstateText = val.workstate === 0 ? 'CheckIn' : 'CheckOut';
+                var workstateColor = val.workstate === 0 ? 'color: red;' : 'color: green;';
+                var workstateText = val.workstate === 1 ? 'CheckIn' : 'CheckOut';
                 var punchTime = new Date(val.punch_time);
 
                 var newCard = $('<div class="col-lg-3">' +
