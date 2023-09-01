@@ -71,8 +71,8 @@
 
                                     {{ $val->workstate }}
                                     <hr/>
-                                        <span class="font-size-14" <?php if($val->workstate==1) { echo 'style="color:green"'; } else { echo  'style="color:red"';} ?> >
-                                                <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==1) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
+                                        <span class="font-size-14" <?php if($val->workstate==0) { echo 'style="color:green"'; } else { echo  'style="color:red"';} ?> >
+                                                <i class="bx bx-time-five"></i>&nbsp @if($val->workstate==0) CheckIn @else CheckOut @endif &nbsp {{ date('h:i:s A', strtotime($val->punch_time)) }}
                                         </span>
                                 </div>
                             </div>
