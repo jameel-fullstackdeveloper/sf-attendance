@@ -8,25 +8,16 @@ use App\Models\AttendancePunches;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 
-use Rats\Zkteco\Lib\ZKTeco;
 
 class HomeController extends Controller
 {
-
+   
 
     public function dashboard(Request $request)
     {
-
-        $zk = new ZKTeco('172.16.1.201');
-
-        $zk->connect();
-
-        return  $zk->getAttendance();
-
-
         $pageTitle = 'Home';
         $data = AttendancePunches::with('employee')->orderBy('id','desc')->limit('12')->get();
-
+    
         $dep = HrDepartment::all();
         return view('dashboard')->with([
             'pageTitle'=>$pageTitle,
@@ -37,13 +28,13 @@ class HomeController extends Controller
 
     public function employees(Request $request)
     {
-        $slug = $request->slug;
+        $slug = $request->slug; 
 
         $att = DB::table('att_punches')
         ->join('hr_employee', 'att_punches.employee_id', '=', 'hr_employee.id')
-        ->join('hr_department', 'hr_employee.department_id', '=', 'hr_department.id')
-        ->select('hr_employee.id', 'att_punches.id as puunchId', 'hr_employee.emp_firstname', 'hr_employee.emp_lastname',
-        'hr_employee.emp_phone', 'att_punches.workstate', 'att_punches.punch_time', 'hr_department.dept_name', 'hr_employee.emp_photo')
+        ->join('hr_department', 'hr_employee.department_id', '=', 'hr_department.id') 
+        ->select('hr_employee.id', 'att_punches.id as puunchId', 'hr_employee.emp_firstname', 'hr_employee.emp_lastname', 
+        'hr_employee.emp_phone', 'att_punches.workstate', 'att_punches.punch_time', 'hr_department.dept_name', 'hr_employee.emp_photo') 
         ->where('hr_employee.department_id', $slug)
         ->whereIn('att_punches.id', function ($query) {
             $query->select(DB::raw('MAX(id)'))
@@ -53,7 +44,7 @@ class HomeController extends Controller
         ->get();
 
         foreach ($att as $key => $val) {
-
+           
             $data[] = [
                 'id' => $val->id,
                 'puunchId' => $val->puunchId,
@@ -66,7 +57,7 @@ class HomeController extends Controller
                 'emp_photo_url' => $val->emp_photo ? 'data:image/png;base64,' . base64_encode($val->emp_photo) : null
             ];
         }
-
+        
 
         return response()->json([
             'status' => 200,
